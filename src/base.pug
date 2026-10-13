@@ -1,0 +1,38 @@
+extends ../src/layout
+
+block content
+  .container.main
+    .col-12
+      header
+        h2.banner-client= info[0].advertiser
+        h3.banner-campaing= info[0].campaign
+      .main-container
+        .table-responsive
+          table.table.table-striped.table-bordered.table-hover
+            thead
+              tr
+                th(scope="col")
+                  span.banner-name Banner Name
+                th(scope="col")
+                  span.backup-image Backup Image
+                if (info[0].fileSize.length)
+                  th(scope="col")
+                    span.zip-sizes Zip Sizes
+            tbody
+              -for(var i = 0; i < info.length; i++) {
+                -var arraySizes = info[i].sizes;
+                -var arrayFileSize = info[i].fileSize;
+                -var arrayPath = info[i].path;
+                -for (var j = 0; j < arraySizes.length && arrayPath.length; j++) {
+                  tr(id="heading_"+arraySizes[j]).card-header
+                    td
+                      a(href="./banner.html?size="+arraySizes[j] target="_blank").banner-name-a= arraySizes[j]
+                    td
+                      a(href="./"+arraySizes[j]+"/images/backup.jpg" target="_blank").backup-image Backup
+                    if arrayFileSize.length
+                      td
+                        span.zip-size= arrayFileSize[j]
+                -}
+              -}
+
+        iframe(src="" name="myiFrame" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" allowfullscreen data-size="").iframe-banner

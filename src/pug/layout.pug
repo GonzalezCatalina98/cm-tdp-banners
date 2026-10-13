@@ -1,0 +1,94 @@
+-var isDCS = false;
+doctype html
+html(lang="en").no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="format-detection" content="telephone=no")
+    block title
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+    link(rel="stylesheet" href="css/styles.css")
+    block metaSize
+    if isDCS
+      script(src="https://s0.2mdn.net/ads/studio/Enabler.js")
+    else
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js")
+      script(src="js/main.js")
+    script(src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js")
+    unless isDCS
+      script(type="text/javascript").
+        var clickTag1 = "https://www.google.com/";
+        var clickTag2 = "https://www.google.com/";
+  body.loading
+    .preloader
+      div
+      div
+    block content
+    if isDCS
+      script(type="text/javascript").
+        (function() {
+          window.onload = function() {
+            if (Enabler.isInitialized()) {
+                enablerInitHandler();
+            } else {
+                Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+            }
+          }
+
+          function enablerInitHandler() {
+            // If page is loaded do Polite load of assets
+            if (Enabler.isPageLoaded()) {
+              politeInit();
+            } else {
+              Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED,
+              politeInit);
+            }
+          }
+
+          function politeInit (){
+            console.log('Polite loading scripts');
+            //Feed assets for polite loading
+            politeLoad(['https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',
+                        'js/main.js'], pageLoadedHandler);
+          }
+
+          // Preload assets
+          function politeLoad(urls, onComplete){
+              var l = urls.length,
+                  loaded = 0,
+                  checkProgress = function() {
+                      if (++loaded === l && onComplete) {
+                          onComplete();
+                      }
+                  },
+                  i;
+              for (i = 0; i < l; i++) {
+                  Enabler.loadScript(urls[i], checkProgress);
+              }
+          };
+
+          //If true, start function. If false, listen for VISIBLE.
+          function pageLoadedHandler() {
+            if (Enabler.isVisible()) {
+              adVisibilityHandler();
+            } else {
+              Enabler.addEventListener(studio.events.StudioEvent.VISIBLE,
+              adVisibilityHandler);
+            }
+          }
+
+          function adVisibilityHandler() {
+              // Start the animation
+              AppBanner.getInstance().init();
+          }
+
+        })();
+    else
+      script(type="text/javascript").
+        (function() {
+          window.onload = function() {
+            // Start the animation
+            AppBanner.getInstance().init();
+          }
+        })();

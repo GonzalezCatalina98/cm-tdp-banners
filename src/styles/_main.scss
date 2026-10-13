@@ -1,0 +1,64 @@
+/**
+ * Vendor
+ */
+
+// http://bourbon.io/docs/
+// @import 'bourbon';
+
+/**
+ * Base
+ */
+
+@import "tools/normalize";
+@import "base/base";
+@import "variables";
+@import "layouts/centered";
+
+html {
+  background: transparent;
+}
+
+body {
+  width: $banner-width;
+  height: $banner-height;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.preloader {
+  z-index: 1;
+  position: absolute;
+}
+
+.preloader,
+#wrapper {
+  overflow: hidden;
+  width: $banner-width;
+  height: $banner-height;
+  background: #ccc;
+  font-family: $primary-font;
+  transition: 0.3s;
+}
+
+.showISI {
+  iframe {
+    transition: 0.3s;
+  }
+}
+
+#main-panel {
+  cursor: pointer;
+}
+
+// put your stuff here
