@@ -37,6 +37,8 @@ const animation = {
     //
     self.tl.addLabel('frame1', '+=0.5')
       .from(placeholder, { duration: 0.6, x: 500, ease: 'none' }, 'frame1')
+      .to ( box, 2, { x: 300, repeat: -1, ease: "power2.inOut"}, 'frame1')
+      .to ( box2, 0.2, { y: 300, repeat: -1, ease: "power2.in"}, 'frame1')
       .add(function() {
         finishedAnimation();
       }, 'frame1');
