@@ -35,10 +35,10 @@ const animation = {
     //
     // Timeline Animation
     //
-    self.tl.addLabel('frame1', '+=0.5')
-      .from(placeholder, { duration: 0.6, x: 500, ease: 'none' }, 'frame1')
-      .to ( box, 2, { x: 300, repeat: -1, ease: "power2.inOut"}, 'frame1')
-      .to ( box2, 0.2, { y: 300, repeat: -1, ease: "power2.in"}, 'frame1')
+   self.tl.addLabel('frame1', '+=0.5')
+      .to ( f1txt1, 2, { x: 300, ease: "power1.inOut"}, 'frame1')
+      .to ( f1txt2, 2, { x: 300, ease: "power1.inOut"}, 'frame1')
+      .to ( f1txt3, 2, { x: 300, ease: "power1.inOut"}, 'frame1')
       .add(function() {
         finishedAnimation();
       }, 'frame1');
@@ -96,7 +96,7 @@ const isi = {
       disablePointer: true,
       disableTouch: false,
       disableMouse: false,
-    });
+    });s
 
     self.myScroll.on('scrollStart', function() {
       if (animation.animationFinished) {

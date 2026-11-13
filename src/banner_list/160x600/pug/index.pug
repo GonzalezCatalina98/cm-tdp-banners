@@ -1,0 +1,12 @@
+extends ../../../pug/layout
+block title
+  title BANNER BASE
+block metaSize
+  meta(name="ad.size" content="width=300,height=600")
+
+block content
+  #wrapper.centered-layout
+    #main-panel
+      img(src="images/placeholder.png" style="top:40px;left:20px;")#placeholder.absolute-position
+      include ../../../pug/isi/isi.pug
+    a(href="#" target="_blank").pi Full Prescribing Information and Medication Guide

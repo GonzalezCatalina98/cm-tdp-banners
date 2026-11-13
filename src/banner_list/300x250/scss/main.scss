@@ -15,8 +15,37 @@ $banner-height: 250px;
   #main-panel {
     background-color: $primary-color;
     height: $banner-height;
-    width: $banner-width;
+    width: $banner-width; 
   }
+
+
+  // frame1
+
+  #f1txt1.absolute.position {
+   color: $text-color1;
+   font-family:  $primary-font;
+   font-size: 10px;
+   padding: 50px 10px 2px 20px;
+  }
+  #f1txt2.absolute.position { 
+    color: $text-color2;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: bold;
+     padding: 5px 5px 5px 20px;
+  }
+    #f1txt3.absolute.position {
+    color: $text-color1;
+    font-size: 8px;
+    padding: 30px 0px 0px 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    }
+
+    // frame 2
+
+    
+
 
   // Pi
   .pi {
