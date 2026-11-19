@@ -7,20 +7,45 @@ block metaSize
 block content
   #wrapper.centered-layout
     #main-panel
-      //-frame1
-      #f1txts 
-      #f1txt1.absolute.position Medica lorem ipsum dolor sit amet, consectetur adipiscing <br> elit vivamus vitae sapien
-      #f1txt2.absolute.position Pharmaceutica dolor sit amet, consectetur adipiscing elit. BIORESEARCH efficitur sapien<sup>1</sup>
-      #f1txt3.absolute.position 1L= Ut perspiciatis unde omnis iste <br>sit = Natus error sit voluptatem
-    
-    img(src="images/logo.png", style="bottom:20px;left:180px; width:88px", alt="logo")
-      
-      //-frame2
-    
-      #f2txt1.absolute.position Header 1
-      #f2txt2.absolute.position Subheader 1
-      img(src="images/group477.png", alt="porcent")
-      #f2txt2.absolute.position Sed ut perspiciatis unde
 
-      include ../../../pug/isi/isi.pug
+    //- frame1//
+    #f1txts 
+    #f1txt1.absolute-position Medica lorem ipsum dolor sit amet, consectetur adipiscing <br> elit vivamus vitae sapien
+    #f1txt2.absolute-position Pharmaceutica dolor sit amet, consectetur adipiscing elit. BIORESEARCH efficitur sapien<sup>1</sup>
+    #f1txt3.absolute-position 1L= Ut perspiciatis unde omnis iste <br>sit = Natus error sit voluptatem
+    img.absolute-position(src="images/logo.png", style="top:190px ;left:200px; width:80px", alt="logo")
+    
+    //- frame2//
+    #f2txts 
+    #f2txt1.absolute-position Header 1
+    #f2txt2.absolute-position Subheader 1
+    img.absolute-position.porcent(src="images/group477.png", style="top:70px ;left:80px; width:150px", alt="porcent")
+    #f2txt3.absolute-position Sed ut perspiciatis unde
+
+    
+    //- frame3//
+    #f3txts 
+    #f3txt1.absolute-position Header 2
+    #f3txt2.absolute-position Subheader 2
+    img.absolute-position.porcent1(src="images/group477.png", style="top:60px ;left:120px; width:150px", alt="porcent")
+    #f3txt3.absolute-position Sed ut perspiciatis unde
+    #f3txt4.absolute-position Pharmaceutica lorem ipsum dolor sit amet, <br>consectetur adipiscing elit. Medica curae vitae <br>sapien efficitur gravida. Lab-tested solutions <br>ensure maximus salutem et benificium.
+    
+    //- frame4//
+    #f4txts 
+    #f4txt1.absolute-position Header 3
+    #f4txt2.absolute-position Subheader 3
+    img.absolute-position.porcent2(src="images/graf-h3.png", style="top:80px ;left:70px; width:150px", alt="porcent")
+    
+    //- frame5//
+    #f5txts 
+    #f5txt1.absolute-position Pharmaceutica lorem ipsum dolor sit amet, consectetur adipiscing elit. Medica curae vitae sapien efficitur gravida. Lab-tested solutions ensure maximus salutem et benificium. Nullam tempor dignissim orci, ac bibendum nisl fermentum vel. Clinically proven results with no adverse reactions. Consult your healthcare provider before use.
+    #f5txt2.absolute-position <sup>+</sup>Innovatio pharmaceutica lorem ipsum dolor sit amet, consectetur <br>adipiscing elit. Lab-tested solutions and advanced research ensure<br> efficitur maximus results for patient wellness.
+    
+    //- frame6//
+    #f6txts 
+    #f6txt1.absolute-position Vivamus vitae sapien vel ligula efficitur gravida.
+    #f6txt2.absolute-position Trusted by healthcare <br> professionals worldwide.
+
+    include ../../../pug/isi/isi.pug
     a(href="#" target="_blank").pi Full Prescribing Information and Medication Guide

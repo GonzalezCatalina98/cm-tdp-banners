@@ -35,13 +35,17 @@ const animation = {
     //
     // Timeline Animation
     //
-   self.tl.addLabel('frame1', '+=0.5')
-      .to ( f1txt1, 2, { x: 300, ease: "power1.inOut"}, 'frame1')
-      .to ( f1txt2, 2, { x: 300, ease: "power1.inOut"}, 'frame1')
-      .to ( f1txt3, 2, { x: 300, ease: "power1.inOut"}, 'frame1')
-      .add(function() {
-        finishedAnimation();
-      }, 'frame1');
+    
+    self.tl.addLabel('frame1', '+=0.5')
+      .to ( f1txt1, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame1')
+      .to ( f1txt2, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame1')
+      .to ( f1txt3, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame1')
+      .add(function() {inishedAnimation();}, 'frame1')
+
+    .addLabel('frame2', '+=0.8')
+      .to([f1txt1, f1txt2, f1txt3], 1, { opacity: 0, ease: "power1.inOut"}, 'frame2')
+      .to ( f2txt1, 2, { x: 30, opacity: 1, ease: "power1.inOut"}, 'frame2+=0.5')
+      .add(function() {inishedAnimation();}, 'frame2')
   },
 };
 
