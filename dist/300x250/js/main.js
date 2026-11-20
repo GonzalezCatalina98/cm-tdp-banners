@@ -187,8 +187,37 @@ const animation = {
 
     .addLabel('frame2', '+=0.8')
       .to([f1txt1, f1txt2, f1txt3], 1, { opacity: 0, ease: "power1.inOut"}, 'frame2')
-      .to ( f2txt1, 2, { x: 30, opacity: 1, ease: "power1.inOut"}, 'frame2+=0.5')
+      .to ( f2txt1, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame2+=0.5')
+      .to ( f2txt2, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame2+=0.5')
+      //.to ( porcent, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame2+=0.5')
+      .to ( f2txt3, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame2+=0.5')
       .add(function() {inishedAnimation();}, 'frame2')
+   
+    .addLabel('frame3', '+=0.8')
+      .to([f2txt1, f2txt2, f2txt3], 1, { opacity: 0, ease: "power1.inOut"}, 'frame3')
+      .to ( f3txt1, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame3+=0.5')
+      .to ( f3txt2, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame3+=0.5')
+      .to ( f3txt3, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame3+=0.5')
+      .to ( f3txt4, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame3+=0.5')
+      .add(function() {inishedAnimation();}, 'frame3')
+
+    .addLabel('frame4', '+=0.8')
+      .to([f3txt1, f3txt2, f3txt3, f3txt4], 1, { opacity: 0, ease: "power1.inOut"}, 'frame4')
+      .to ( f4txt1, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame4+=0.5')
+      .to ( f4txt2, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame4+=0.5')
+      .add(function() {inishedAnimation();}, 'frame4')
+
+    .addLabel('frame5', '+=0.8')
+      .to([f4txt1, f4txt2], 1, { opacity: 0, ease: "power1.inOut"}, 'frame5')
+      .to ( f5txt1, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame5+=0.5')
+      .to ( f5txt2, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame5+=0.5')
+      .add(function() {inishedAnimation();}, 'frame5')
+
+    .addLabel('frame6', '+=0.8')
+      .to([f5txt1, f5txt2], 1, { opacity: 0, ease: "power1.inOut"}, 'frame6')
+      .to ( f6txt1, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame6+=0.5')
+      .to ( f6txt2, 2, { x: 20, opacity: 1, ease: "power1.inOut"}, 'frame6+=0.5')
+      .add(function() {inishedAnimation();}, 'frame6')
   },
 };
 
