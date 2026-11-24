@@ -1,4 +1,4 @@
-$banner-width: 300px;
+$banner-width: 160px;
 $banner-height: 600px;
 
 @import "../../../styles/main";
@@ -17,6 +17,166 @@ $banner-height: 600px;
     height: $banner-height;
     width: $banner-width;
   }
+    // frame1
+
+   #f1txt1 {
+   color: $text-color1;
+   font-family:  $primary-font;
+   font-size: 10px;
+   top: 66px;
+   left: 1px;
+   opacity: 0;
+
+    }
+    #f1txt2 { 
+    color: $text-color2;
+    font-family: $primary-font;
+    font-size: 16px;
+    font-weight: bold;  
+    top: 130px;
+    left: 1px;
+    opacity: 0;
+    }
+
+    #f1txt3 {
+    color: $text-color1;
+    font-size: 8px;
+    top: 260px;
+    left: 1px;
+    opacity: 0;
+    
+    }
+
+    // frame 2
+
+    #f2txt1 {
+    color: $text-color2;
+    font-family:  $primary-font;
+    font-size: 17px;
+    font-weight: bold;
+    top: 30px;
+    left: 1px;
+    opacity: 0;
+    }
+    #f2txt2 { 
+    color: $text-color1;
+    font-family: $primary-font;
+    font-size: 11px;
+    top: 48px;
+    left: 1px;
+    opacity: 0;
+    }
+    img.absolute-position.porcent{ 
+    opacity: 0;}
+
+    #f2txt3 {
+    color: $text-color1;
+    font-size: 8px;
+    top: 260px;
+    left: 10px;
+    opacity: 0;
+    }
+
+
+    // frame 3
+    #f3txt1 {
+    color: $text-color2;
+    font-family:  $primary-font;
+    font-size: 17px;
+    font-weight: bold;
+    top: 20px;
+    left: 5px;
+    opacity: 0;
+   
+    }
+    #f3txt2 { 
+    color: $text-color1;
+    font-family: $primary-font;
+    font-size: 11px;
+    top: 40px;
+    left: 5px;
+    opacity: 0;
+    }
+    img.absolute-position.porcent1{
+      opacity: 0;
+    }
+    #f3txt3 {
+    color: $text-color1;
+    font-size: 8px;
+    top: 210px;
+    left: 10px;
+    opacity: 0;
+    }
+    #f3txt4 {
+    color: $text-color1;
+    font-size: 7px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    top: 250px;
+    left: 5px;
+    opacity: 0;
+
+    }
+    // frame 4
+    #f4txt1 {
+    color: $text-color2;
+    font-family:  $primary-font;
+    font-size: 17px;
+    font-weight: bold;
+    top: 20px;
+    left: 5px;
+    opacity: 0;
+    } 
+    #f4txt2 { 
+    color: $text-color1;
+    font-family: $primary-font;
+    font-size: 11px;
+    top: 39px;
+    left: 5px;
+    opacity: 0;
+    }
+     img.absolute-position.porcent2{
+      opacity: 0;
+     }
+
+   // frame 5
+    #f5txt1 {
+    color: $text-color1;
+    font-family: $primary-font;
+    font-size: 9px;
+    top: 77px;
+    left: 5px;
+    opacity: 0;
+   }
+    #f5txt2 {
+    color: $text-color1;
+    font-family: $primary-font;
+    font-size: 9px;
+    top: 160px;
+    left: 5px;
+    opacity: 0;
+   }
+
+    // frame 6
+    #f6txt1 {
+    color: $text-color1;
+    font-family: $primary-font;
+    font-size: 11px;
+    top:70px;
+    left: 2px;
+    font-weight: bold;
+    opacity: 0;
+    }
+
+    #f6txt2 { 
+    color: $text-color2;
+    font-family: $primary-font;
+    font-size: 17px;
+    font-weight: bold;
+    top: 115px;
+    left: 2px;
+    opacity: 0;
+    }
 
   // Pi
   .pi {
@@ -38,10 +198,10 @@ $banner-height: 600px;
 // ISI styles
 .isi-main {
   width: 100%;
-  height: 128px;
+  height: 169px;
   background-color: #fff;
   left: 0;
-  top: 106px;
+  top: 600px;
   /* stylelint-disable-next-line property-no-vendor-prefix */
   -webkit-transition: all 300ms;
   /* stylelint-disable-next-line property-no-vendor-prefix */

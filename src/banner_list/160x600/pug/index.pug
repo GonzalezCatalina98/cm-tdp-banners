@@ -2,11 +2,49 @@ extends ../../../pug/layout
 block title
   title BANNER BASE
 block metaSize
-  meta(name="ad.size" content="width=300,height=600")
+  meta(name="ad.size" content="width=160,height=600")
 
 block content
   #wrapper.centered-layout
     #main-panel
-      img(src="images/placeholder.png" style="top:40px;left:20px;")#placeholder.absolute-position
+    //- frame1//
+    #f1txts 
+    #f1txt1.absolute-position Medica lorem ipsum dolor <br>sit amet, consectetur <br>adipiscing elit vivamus vitae <br>sapien
+    #f1txt2.absolute-position Pharmaceutica dolor sit amet, consectetur adipiscing elit. BIORESEARCH efficitur sapien<sup>1</sup>
+    #f1txt3.absolute-position 1L= Ut perspiciatis unde omnis iste <br>sit = Natus error sit voluptatem
+    img.absolute-position(src="images/logo-8.1.png", style="top:360px ;left:30px; width:98px", alt="logo")
+    
+    //- frame2//
+    #f2txts 
+    #f2txt1.absolute-position Header 1
+    #f2txt2.absolute-position Subheader 1
+    img#f2img.absolute-position.porcent(src="images/frame-477-160x600.png", style="top:99px ;left:20px; width:60px", alt="porcent")
+    #f2txt3.absolute-position Sed ut perspiciatis unde
+
+    
+    //- frame3//
+    #f3txts 
+    #f3txt1.absolute-position Header 2
+    #f3txt2.absolute-position Subheader 2
+    img#f3img.absolute-position.porcent1(src="images/frame-477-160x600.png", style="top:66px ;left:20px; width:60px", alt="porcent")
+    #f3txt3.absolute-position Sed ut perspiciatis unde
+    #f3txt4.absolute-position Sed ut perspiciatis unde omnis iste <br>natus error sit voluptatem <br>accusantium doloremque laudantium, <br>totam rem aperiam, eaque ipsa quae <br>ab illo inventore veritatis et quasi <br>architecto beatae vitae.
+    
+    //- frame4//
+    #f4txts 
+    #f4txt1.absolute-position Header 3
+    #f4txt2.absolute-position Subheader 3
+    img#f4img.absolute-position.porcent2(src="images/frame-477-160x600-2.png", style="top: 110px ;left:20px; width:65px", alt="porcent")
+    
+    //- frame5//
+    #f5txts 
+    #f5txt1.absolute-position Lorem ipsum dolor sit <br>amet, consectetur <br>adipiscing elit, sed do <br>eiusmod tempor incididunt <br>Sed ut perspiciatis unde <br>omnis iste natus error sit <br>voluptatem
+    #f5txt2.absolute-position Sed ut perspiciatis unde <br>omnis iste natus error sit <br>voluptatem accusantium <br>doloremque laudantium, <br>totam rem aperiam, eaque <br>ipsa quae ab illo inventore <br>veritatis et quasi architecto <br>beatae vitae.
+    
+    //- frame6//
+    #f6txts 
+    #f6txt1.absolute-position Vivamus vitae sapien vel ligula efficitur gravida.
+    #f6txt2.absolute-position Trusted by <br>healthcare <br>professionals <br>worldwide.
+
       include ../../../pug/isi/isi.pug
     a(href="#" target="_blank").pi Full Prescribing Information and Medication Guide
