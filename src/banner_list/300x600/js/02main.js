@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 /**
  *
  * start animating
@@ -37,13 +35,52 @@ const animation = {
     //
     // Timeline Animation
     //
-    self.tl.addLabel('frame1', '+=0.5')
-      .from(placeholder, { duration: 0.6, x: 500, ease: 'none' }, 'frame1')
-      .add(function() {
-        finishedAnimation();
-      }, 'frame1+=3');
+    
+    self.tl.addLabel('frame1', '+=0.2')
+      .to ( f1txt1, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame1')
+      .to ( f1txt2, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame1')
+      .to ( f1txt3, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame1')
+      .add(function() {inishedAnimation();}, 'frame1')
+
+    .addLabel('frame2', '+=0.2')
+      .to([f1txt1, f1txt2, f1txt3], 1, { opacity: 0, ease: "power1.inOut"}, 'frame2')
+      .to ( f2txt1, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame2+=0.5')
+      .to ( f2txt2, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame2+=0.5')
+      .to(f2img, 1, { opacity: 1, ease: "power1.inOut" }, "frame2+=0.5")
+      .to(f2img, 3, { x: 300, ease: "power1.inOut" }, "frame2+=1.5")     
+      .to ( f2txt3, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame2+=0.5')
+      .add(function() {inishedAnimation();}, 'frame2')
+   
+    .addLabel('frame3', '+=0.2')
+      .to([f2txt1, f2txt2, f2txt3, f2img], 1, { opacity: 0, ease: "power1.inOut"}, 'frame3')
+      .to ( f3txt1, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame3+=0.5')
+      .to ( f3txt2, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame3+=0.5')
+      .to ( f3img, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame3+=0.5')
+      .to ( f3txt3, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame3+=0.5')
+      .to ( f3txt4, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame3+=0.5')
+      .add(function() {inishedAnimation();}, 'frame3')
+
+    .addLabel('frame4', '+=0.3')
+      .to([f3txt1, f3txt2, f3txt3, f3txt4, , f3img], 1, { opacity: 0, ease: "power1.inOut"}, 'frame4')
+      .to ( f4txt1, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame4+=0.5')
+      .to ( f4txt2, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame4+=0.5')
+      .to ( f4img, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame4+=0.5')
+      .add(function() {inishedAnimation();}, 'frame4')
+
+    .addLabel('frame5', '+=0.4')
+      .to([f4txt1, f4txt2, f4img], 1, { opacity: 0, ease: "power1.inOut"}, 'frame5')
+      .to ( f5txt1, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame5+=0.5')
+      .to ( f5txt2, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame5+=0.5')
+      .add(function() {inishedAnimation();}, 'frame5')
+
+    .addLabel('frame6', '+=0.2')
+      .to([f5txt1, f5txt2], 1, { opacity: 0, ease: "power1.inOut"}, 'frame6')
+      .to ( f6txt1, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame6+=0.5')
+      .to ( f6txt2, 2, { x: 0, opacity: 1, ease: "power1.inOut"}, 'frame6+=0.5')
+      .add(function() {inishedAnimation();}, 'frame6')
   },
 };
+    
 
 const isi = {
   config: {
@@ -192,6 +229,7 @@ AppBanner.fn.anima = function() {
   mainExit.on('click', AppBanner.fn.mainExitHandler);
   $('#wrapper').on('click', AppBanner.fn.piExitHandler);
 };
+
 
 if (isDCS) {
   // Main Exit Handler

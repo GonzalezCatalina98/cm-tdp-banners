@@ -21,29 +21,27 @@ $banner-height: 600px;
 
    #f1txt1 {
    color: $text-color1;
-   font-family:  $primary-font;
-   font-size: 10px;
-   //top:45px;
-   //left: 10px;
-   //opacity: 0;
+   font-family: $primary-font;
+   font-size: 17px;
+   top:90px;
+   left: 10px;
+   opacity: 0;
 
     }
     #f1txt2 { 
     color: $text-color2;
     font-family: $primary-font;
-    font-size: 16px;
+    font-size: 27px;
     font-weight: bold;  
-    top: 80px;
+    top: 190px;
     left: 10px;
     opacity: 0;
     }
 
     #f1txt3 {
     color: $text-color1;
-    font-size: 8px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    top: 190px;
+    font-size: 15px;
+    top: 400px;
     left: 10px;
     opacity: 0;
     
@@ -53,12 +51,12 @@ $banner-height: 600px;
 
     #f2txt1 {
     color: $text-color2;
-    font-family:  $primary-font;
+    font-family: $primary-font;
     font-size: 17px;
     font-weight: bold;
     top: 20px;
     left: 10px;
-    opacity: 0;
+    //opacity: 0;
     }
     #f2txt2 { 
     color: $text-color1;
@@ -66,9 +64,9 @@ $banner-height: 600px;
     font-size: 11px;
     top: 38px;
     left: 10px;
-    opacity: 0;
+    //opacity: 0;
     }
-    img.absolute-position.porcent{ 
+    //img.absolute-position.porcent{ 
       opacity: 0;}
 
     #f2txt3 {
@@ -78,7 +76,7 @@ $banner-height: 600px;
     margin-bottom: 0px;
     top: 145px;
     left: 108px;
-    opacity: 0;
+    //opacity: 0;
     }
 
 
@@ -198,7 +196,6 @@ $banner-height: 600px;
     display: block;
     text-align: left;
   }
-}
 
 // ISI styles
 .isi-main {
